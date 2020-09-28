@@ -1,0 +1,59 @@
+.theme-dark-primary{
+    background: $dark-primary !important;
+    color: $light-text !important;
+}
+
+.theme-dark-secondary{
+    background: $dark-secondary !important;
+    color: $light-text !important;
+}
+
+.theme-dark-accent{
+    background: $dark-accent !important;
+    color: $light-text !important;
+}
+
+.theme-dark-accent-2{
+    background: $dark-accent-2 !important;
+    color: $light-text !important;
+}
+
+.theme-dark-danger{
+    background: $danger !important;
+    color: $light-text !important;
+}
+
+.theme-dark-success{
+    background: $success !important;
+    color: $light-text !important;
+}
+
+.theme-dark-light-color{
+    color: $light-text !important;
+}
+
+.theme-dark-dark-color{
+    color: $dark-text !important;
+}
+
+.theme-dark-light-stroke-color{
+    stroke: $light-text !important;
+}
+.theme-dark-light-fill-color{
+    fill: $light-text !important;
+}
+
+.theme-dark-secondary-button{
+    background: $dark-secondary !important;
+    color: $light-text !important;
+    border: 0 !important;
+}
+.theme-dark-secondary-button:hover{
+    opacity: 0.8 !important;
+}
+
+// Theme Nav
+.theme-dark-nav{
+    color: $light-text !important;
+    background: $dark-secondary !important;
+}

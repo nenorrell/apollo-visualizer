@@ -1,0 +1,18 @@
+@import "../../../styles/animations.scss";
+
+@include keyframes(slide-down){
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    50% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}  
+
+.alert-bar{
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    @include animation('slide-down 2s');
+}

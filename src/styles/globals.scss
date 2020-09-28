@@ -1,0 +1,45 @@
+// $dark-primary: #292F36; //#456990
+$dark-primary: #23272a;
+$dark-secondary: #7289da;
+$dark-accent: #2c2f33;
+$dark-accent-2: #424549;
+
+$success: #7FDB94; //#49BEAA
+$danger: #EF767A; //#FF6B6B // FF6B6B
+$info: #4ECDC4;
+$warning: #FFE66D;
+$light-text: #FEFEFF;
+$dark-text: #333333;
+
+.full-height {
+	height: 100vh;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.is-vertically-centered-parent{
+    height: 100%;
+}
+
+.is-vertically-centered-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-x{
+    overflow-x: auto;
+}
+
+@import "./themes/dark-theme.scss";
+@import "bulma";
+
+.tag{
+    border-radius: 50px !important;
+}

@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  visualizer-client:
+    image: "node:14"
+    user: "node"
+    working_dir: /usr/src/app      
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3001:3002"
+      - "3002:3002"
+    expose:
+      - "3001"
+    command: "npm start"
