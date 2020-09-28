@@ -1,11 +1,12 @@
 import './Home.scss';
 import React, {useEffect, useState} from "react";
-import {useObjectState} from "../../modules/utility"
 import { Alert } from "../common/alert/Alert";
 import { ConfigContext } from "../../modules/ConfigContext";
 import { AlertContext } from "../../modules/AlertContext";
 import { DocRow } from '../doc-row/DocRow';
 import { v4 as uuidv4 } from 'uuid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as icons from "@fortawesome/free-solid-svg-icons";
 
 export const Home = ()=>{
     const config = React.useContext(ConfigContext);
@@ -47,7 +48,12 @@ export const Home = ()=>{
                         :(null)
                     }
                     <div>
-                        <h5 className="tag theme-dark-secondary is-size-5">Untagged Routes</h5>
+                        <h5 className="tag theme-dark-secondary is-size-5">
+                            <span className="tag-icon">
+                                <FontAwesomeIcon icon={icons.faMeteor}/>
+                            </span>
+                            Untagged Routes
+                        </h5>
                         {
                             ungroupedRoutes.length != 0 ? (
                                 processRouteItems(ungroupedRoutes)
@@ -92,7 +98,12 @@ const extractUngroupedRoutes = (items)=>{
 const processGroupRouteItems = (group)=>{
     return(
         <div key={uuidv4()}>
-            <h5 className="tag theme-dark-secondary is-size-5">{group.tag}</h5>
+            <h5 className="tag theme-dark-secondary is-size-5">
+                <span className="tag-icon">
+                    <FontAwesomeIcon icon={icons.faMeteor}/>
+                </span>
+                {group.tag} 
+            </h5>
             {processRouteItems(group.routes, group.tag)}
         </div>
     )

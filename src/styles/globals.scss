@@ -11,35 +11,8 @@ $warning: #FFE66D;
 $light-text: #FEFEFF;
 $dark-text: #333333;
 
-.full-height {
-	height: 100vh;
-}
-
-.clickable{
-    cursor: pointer;
-}
-
-.hidden{
-    display: none;
-}
-
-.is-vertically-centered-parent{
-    height: 100%;
-}
-
-.is-vertically-centered-child{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scroll-x{
-    overflow-x: auto;
-}
-
+@import "./fonts.scss";
 @import "./themes/dark-theme.scss";
+@import "./layout.scss";
+@import "./global-styles.scss";
 @import "bulma";
-
-.tag{
-    border-radius: 50px !important;
-}

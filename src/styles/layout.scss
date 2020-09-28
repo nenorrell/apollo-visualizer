@@ -1,0 +1,21 @@
+.full-height {
+	height: 100vh;
+}
+
+.hidden{
+    display: none;
+}
+
+.is-vertically-centered-parent{
+    height: 100%;
+}
+
+.is-vertically-centered-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-x{
+    overflow-x: auto;
+}

@@ -1,7 +1,5 @@
 import './DocRow.scss';
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import * as icons from "@fortawesome/free-solid-svg-icons";
 import {DocHeader} from "../doc-header/DocHeader";
 import {DocDetails} from "../doc-details/DocDetails";
 

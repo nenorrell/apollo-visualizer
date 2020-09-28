@@ -7,8 +7,8 @@ import {ConfigContext, ConfigProvider} from "./modules/ConfigContext"
 
 export const App = ()=>{
     useEffect(() => {
-        document.body.className = 'theme-dark-primary full-height';
-      });
+        document.body.className = 'theme-dark-primary full-height robotic-font';
+    });
     
     return(
         <ConfigProvider>
