@@ -16,12 +16,12 @@ export const DocHeader = ({item, detailsExpanded, expandToggle})=>{
                     <span className={`method method-${item.method}`}>{item.method.toUpperCase()}</span>
                 </div>
             </div>
-            <div className="column is-9-desktop is-8-tablet">
+            <div className="column is-9-desktop is-7-touch">
                 <div className="has-text-left">
                     <p className="theme-dark-light-color" dangerouslySetInnerHTML={formatPathParams(item.path, item.pathParams)}></p>
                 </div>
             </div>
-            <div className="column is-1-desktop is-2-touch">
+            <div className="column is-1-desktop is-3-touch">
                 <div className="has-text-right">
                     {
                         authRequired?(
