@@ -2,13 +2,15 @@ import React from "react";
 import './Navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as icons from "@fortawesome/free-solid-svg-icons";
+import { ThemeContext } from "../../modules/ThemeContext";
 
 export const Navbar = ({displayHelpModal})=>{
+    const themeContext = React.useContext(ThemeContext);
     return (
-        <nav className="navbar theme-dark-nav" role="navigation" aria-label="main navigation">
+        <nav className={`navbar theme-${themeContext}-nav`} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <div className="navbar-item">
-                    <h3 className="theme-dark-light-color is-size-3">
+                    <h3 className={`theme-${themeContext}-text-color is-size-3`}>
                         <FontAwesomeIcon icon={icons.faUserAstronaut}/> Apollo Visualizer
                     </h3>
                 </div>
@@ -17,7 +19,6 @@ export const Navbar = ({displayHelpModal})=>{
                 <div className="navbar-item" onClick={()=>{
                     displayHelpModal(true);
                 }}>
-                    {/* <p className="theme-dark-light-color issues"><FontAwesomeIcon icon={icons.faInfoCircle}/> Having Issues?</p> */}
                 </div>
             </div>
         </nav>

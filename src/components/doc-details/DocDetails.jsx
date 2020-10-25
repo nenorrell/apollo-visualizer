@@ -1,15 +1,17 @@
 import './DocDetails.scss';
 import React from "react";
 import { ParamsTable } from '../common/table/ParamsTable';
+import { ThemeContext } from '../../modules/ThemeContext';
 
 export const DocDetails = ({ item }) => {
+    const themeContext = React.useContext(ThemeContext);
     let bodySchema = null;
     if(item.bodySchema){
         bodySchema = processBodySchema(item.bodySchema);
     }
 
     return (
-        <div className="doc-row theme-dark-accent">
+        <div className={`doc-row theme-${themeContext}-accent`}>
             <div className="columns is-mobile">
                 <div className="column">
                     <div className="has-text-left">
@@ -41,12 +43,12 @@ export const DocDetails = ({ item }) => {
                     <div className="param-section">
                         <div className="columns is-mobile">
                             <div className="column">
-                                <h6 className="tag theme-dark-secondary is-size-6">Example Request Body</h6>
+                                <h6 className={`tag theme-${themeContext}-secondary is-size-6`}>Example Request Body</h6>
                             </div>
                         </div>
                         <div className="columns is-mobile">
                             <div className="column is-6-tablet is-12-mobile">
-                                <pre className="theme-dark-accent-2">
+                                <pre className={`theme-${themeContext}-accent-2`}>
                                     {JSON.stringify(bodySchema, null, 2)}
                                 </pre>
                             </div>

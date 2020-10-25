@@ -1,59 +1,25 @@
-.theme-dark-primary{
-    background: $dark-primary !important;
-    color: $light-text !important;
-}
+$dark-text: #333333;
+$light-text: #FEFEFF;
 
-.theme-dark-secondary{
-    background: $dark-secondary !important;
-    color: $light-text !important;
-}
-
-.theme-dark-accent{
-    background: $dark-accent !important;
-    color: $light-text !important;
-}
-
-.theme-dark-accent-2{
-    background: $dark-accent-2 !important;
-    color: $light-text !important;
-}
-
-.theme-dark-danger{
-    background: $danger !important;
-    color: $light-text !important;
-}
-
-.theme-dark-success{
-    background: $success !important;
-    color: $light-text !important;
-}
-
-.theme-dark-light-color{
-    color: $light-text !important;
-}
-
-.theme-dark-dark-color{
-    color: $dark-text !important;
-}
-
-.theme-dark-light-stroke-color{
-    stroke: $light-text !important;
-}
-.theme-dark-light-fill-color{
-    fill: $light-text !important;
-}
-
-.theme-dark-secondary-button{
-    background: $dark-secondary !important;
-    color: $light-text !important;
-    border: 0 !important;
-}
-.theme-dark-secondary-button:hover{
-    opacity: 0.8 !important;
-}
-
-// Theme Nav
-.theme-dark-nav{
-    color: $light-text !important;
-    background: $dark-secondary !important;
-}
+$theme-dark-colors: (
+    dark-hover-modifier: 5%,
+    dark-primary: #23272a,
+    dark-primary-text: $light-text,
+    dark-secondary: #7289da,
+    dark-secondary-text: $light-text,
+    dark-accent: #2c2f33,
+    dark-accent-text: $light-text,
+    dark-accent-2: #424549,
+    dark-accent-2-text: $light-text,
+    dark-success: #5EF38C,
+    dark-success-text: $light-text,
+    dark-danger: #E56B6F,
+    dark-danger-text: $light-text,
+    dark-info: #007acc,
+    dark-info-text: $light-text,
+    dark-warning: #ef8354,
+    dark-warning-text: $dark-text,
+    dark-light-text: $light-text,
+    dark-dark-text: $dark-text,
+    dark-text: $light-text,
+);

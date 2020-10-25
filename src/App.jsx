@@ -4,18 +4,22 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Home } from "./components/home/Home";
 import {AlertContext, AlertProvider} from "./modules/AlertContext"
 import {ConfigContext, ConfigProvider} from "./modules/ConfigContext"
+import {ThemeContext, ThemeProvider} from "./modules/ThemeContext"
 
 export const App = ()=>{
+    const themeContext = React.useContext(ThemeContext);
     useEffect(() => {
-        document.body.className = 'theme-dark-primary full-height robotic-font';
+        document.body.className = `theme-${themeContext}-primary full-height robotic-font`;
     });
     
     return(
         <ConfigProvider>
-            <AlertProvider>
-                <Navbar />
-                <Home />
-            </AlertProvider>
+            <ThemeProvider>
+                <AlertProvider>
+                    <Navbar />
+                    <Home />
+                </AlertProvider>
+            </ThemeProvider>
         </ConfigProvider>
     )
 }
