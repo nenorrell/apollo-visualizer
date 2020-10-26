@@ -9,3 +9,27 @@
 .tag{
     border-radius: 50px !important;
 }
+
+.thin-border{
+    border: 1px thin !important;
+}
+
+.no-border{
+    border: none !important;
+}
+
+$track-color: #333333;
+*::-webkit-scrollbar{
+    width: 9px;
+}
+*{
+    scrollbar-width: thin;
+    scrollbar-color: dark;
+}
+*::-webkit-scrollbar-track{
+    background: $track-color;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: lighten($track-color, 10%);
+    border-radius: 6px;
+} 

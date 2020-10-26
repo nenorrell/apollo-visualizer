@@ -7,16 +7,17 @@ import {ConfigContext, ConfigProvider} from "./modules/ConfigContext"
 import {ThemeContext, ThemeProvider} from "./modules/ThemeContext"
 
 export const App = ()=>{
-    const themeContext = React.useContext(ThemeContext);
+    let theme = localStorage.getItem('theme') || "dark";
+    const [currentTheme, changeTheme] = React.useState(null);
     useEffect(() => {
-        document.body.className = `theme-${themeContext}-primary full-height robotic-font`;
+        document.body.className = `theme-${currentTheme || theme}-primary full-height robotic-font`;
     });
     
     return(
         <ConfigProvider>
-            <ThemeProvider>
+            <ThemeProvider theme={currentTheme || theme}>
                 <AlertProvider>
-                    <Navbar />
+                    <Navbar currentTheme={currentTheme || theme} changeTheme={changeTheme} />
                     <Home />
                 </AlertProvider>
             </ThemeProvider>

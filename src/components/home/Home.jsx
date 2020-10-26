@@ -46,7 +46,7 @@ export const Home = ()=>{
                     {
                         groupedRoutes.length != 0 ? (
                             groupedRoutes.map(group=>
-                            processGroupRouteItems(group))                         
+                            processGroupRouteItems(group, themeContext))                         
                         )
                         :(null)
                     }
@@ -59,7 +59,7 @@ export const Home = ()=>{
                         </h5>
                         {
                             ungroupedRoutes.length != 0 ? (
-                                processRouteItems(ungroupedRoutes)
+                                processRouteItems(ungroupedRoutes, themeContext)
                             )
                             :(null)
                         }
@@ -98,8 +98,7 @@ const extractUngroupedRoutes = (items)=>{
     return routes;
 }
 
-const processGroupRouteItems = (group)=>{
-    const themeContext = React.useContext(ThemeContext);
+const processGroupRouteItems = (group, themeContext)=>{
     return(
         <div key={uuidv4()}>
             <h5 className={`tag theme-${themeContext}-secondary is-size-5`}>

@@ -3,10 +3,8 @@ import React from 'react';
 const ThemeContext = React.createContext();
 
 const ThemeProvider = (props) => {
-    let theme = localStorage.getItem('theme') || "dark";
-    
     return (
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={props.theme}>
             {props.children}
         </ThemeContext.Provider>
     );

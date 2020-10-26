@@ -12,7 +12,7 @@ export const Table = ({headers, tableItems}) => {
                 <tr>
                     {
                         headers.map((header) =>
-                            <th key={uuidv4()} className={`theme-${themeContext}-text-color`}>{header}</th>
+                            <th key={uuidv4()}>{header}</th>
                         )
                     }
                 </tr>

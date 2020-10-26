@@ -19,6 +19,11 @@ $theme-colors: map-collect(
         background: map-get($theme-colors, $category) !important;
         color: map-get($theme-colors, '#{$category}-text') !important;
     }
+    .theme-#{$category}{
+        p,h1,h2,h3,h4,h5,h6,th,td {
+            color: map-get($theme-colors, '#{$category}-text') !important;
+        }
+    }
     .theme-#{$category}-hover{
         background: map-get($theme-colors, $category) !important;
         color: map-get($theme-colors, '#{$category}-text') !important;
@@ -34,6 +39,28 @@ $theme-colors: map-collect(
         color: map-get($theme-colors, $category) !important;
         &:hover{
             color: darken(map-get($theme-colors, $category), map-get($theme-colors, '#{$theme}-hover-modifier')) !important;
+        }
+    }
+
+    .theme-#{$category}-border-color{
+        border-color: map-get($theme-colors, $category) !important;
+    }
+    .theme-#{$category}-border-color-hover{
+        border-color: map-get($theme-colors, $category) !important;
+        &:hover{
+            border-color: darken(map-get($theme-colors, $category), map-get($theme-colors, '#{$theme}-hover-modifier')) !important;
+        }
+    }
+
+    .theme-#{$category}-select-override{
+        .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active{
+            border-color: map-get($theme-colors, $category) !important;
+        }
+        .select:not(.is-multiple):not(.is-loading)::after {
+            border-color: map-get($theme-colors, $category) !important;
+        }
+        &:hover{
+            border-color: darken(map-get($theme-colors, $category), map-get($theme-colors, '#{$theme}-hover-modifier')) !important;
         }
     }
 }
