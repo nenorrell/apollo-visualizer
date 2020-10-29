@@ -7,7 +7,7 @@ import { ThemeContext } from "../../modules/ThemeContext";
 import { DocRow } from '../doc-row/DocRow';
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as icons from "@fortawesome/free-solid-svg-icons";
+import {faMeteor} from "@fortawesome/free-solid-svg-icons";
 
 export const Home = ()=>{
     const config = React.useContext(ConfigContext);
@@ -53,7 +53,7 @@ export const Home = ()=>{
                     <div>
                         <h5 className={`tag theme-${themeContext}-secondary is-size-5`}>
                             <span className="tag-icon">
-                                <FontAwesomeIcon icon={icons.faMeteor}/>
+                                <FontAwesomeIcon icon={faMeteor}/>
                             </span>
                             Untagged Routes
                         </h5>
@@ -103,7 +103,7 @@ const processGroupRouteItems = (group, themeContext)=>{
         <div key={uuidv4()}>
             <h5 className={`tag theme-${themeContext}-secondary is-size-5`}>
                 <span className="tag-icon">
-                    <FontAwesomeIcon icon={icons.faMeteor}/>
+                    <FontAwesomeIcon icon={faMeteor}/>
                 </span>
                 {group.tag} 
             </h5>

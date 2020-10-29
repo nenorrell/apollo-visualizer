@@ -2,7 +2,7 @@ import React from "react";
 import './Navbar.scss';
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as icons from "@fortawesome/free-solid-svg-icons";
+import { faUserAstronaut, faPalette } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = ({currentTheme, changeTheme})=>{
     let themes = [
@@ -15,7 +15,7 @@ export const Navbar = ({currentTheme, changeTheme})=>{
             <div className="navbar-brand">
                 <div className="navbar-item">
                     <h3 className={`theme-${currentTheme}-text-color is-size-3`}>
-                        <FontAwesomeIcon icon={icons.faUserAstronaut}/> Apollo Visualizer
+                        <FontAwesomeIcon icon={faUserAstronaut}/> Apollo Visualizer
                     </h3>
                 </div>
             </div>
@@ -39,7 +39,7 @@ export const Navbar = ({currentTheme, changeTheme})=>{
                             <span className="icon is-left">
                                 <FontAwesomeIcon 
                                     className={`theme-${currentTheme}-secondary-color`}
-                                    icon={icons.faPalette}
+                                    icon={faPalette}
                                 />
                             </span>
                         </div>

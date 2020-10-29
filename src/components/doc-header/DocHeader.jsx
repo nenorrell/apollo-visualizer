@@ -1,7 +1,7 @@
 import './DocHeader.scss';
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as icons from "@fortawesome/free-solid-svg-icons";
+import {faLock, faChevronDown, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import { ThemeContext } from '../../modules/ThemeContext';
 
 export const DocHeader = ({item, detailsExpanded, expandToggle})=>{
@@ -29,17 +29,17 @@ export const DocHeader = ({item, detailsExpanded, expandToggle})=>{
                     {
                         authRequired?(
                             <span className="authentication-icon">
-                                <FontAwesomeIcon icon={icons.faLock}/>
+                                <FontAwesomeIcon icon={faLock}/>
                             </span>
                         )
                         :(null)
                     }
                     {
                         detailsExpanded?(
-                            <FontAwesomeIcon icon={icons.faChevronDown}/>
+                            <FontAwesomeIcon icon={faChevronDown}/>
                         )
                         :(
-                            <FontAwesomeIcon icon={icons.faChevronRight}/>
+                            <FontAwesomeIcon icon={faChevronRight}/>
                         )
                     }
                 </div>

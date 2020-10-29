@@ -12,7 +12,7 @@ const PATHS = {
   bundlePath:  path.resolve(__dirname, `./src/app.js`)
 }
 
-module.exports = {
+let config = {
     entry: [RegeneratorRuntime, 'whatwg-fetch', './src/app.js'],
     module: {
       rules: [
@@ -66,10 +66,15 @@ module.exports = {
         publicPath: PATHS.build,
         filename: bundleName
     },
-    devtool: "inline-source-map",
 
     devServer: {
       compress: true,
       port: 3002
     }
 };
+
+if(!isProduction){
+  config["devtool"] = "inline-source-map";
+}
+
+module.exports = config;

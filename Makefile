@@ -4,7 +4,7 @@ network:
 	./network.sh
 
 compile:
-	docker run --user node -i --rm --name compile-visualizer -v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm run-script build
+	docker run --user node -i --rm --name compile-visualizer -e NODE_ENV=production -v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm run-script build
 
 install:
 	docker run -i --rm --name install-visualizer -v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm install ${PCKG}
