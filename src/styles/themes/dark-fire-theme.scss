@@ -1,0 +1,25 @@
+$dark-text: #333333;
+$light-text: #FEFEFF;
+
+$theme-dark-fire-colors: (
+    dark-fire-hover-modifier: 5%,
+    dark-fire-primary: #23272a,
+    dark-fire-primary-text: $light-text,
+    dark-fire-secondary: #E75A7C,
+    dark-fire-secondary-text: $light-text,
+    dark-fire-accent: #2C363F,
+    dark-fire-accent-text: $light-text,
+    dark-fire-accent-2: #F2F5EA,
+    dark-fire-accent-2-text: $dark-text,
+    dark-fire-success: #5EF38C,
+    dark-fire-success-text: $light-text,
+    dark-fire-danger: #E56B6F,
+    dark-fire-danger-text: $light-text,
+    dark-fire-info: #007acc,
+    dark-fire-info-text: $light-text,
+    dark-fire-warning: #ef8354,
+    dark-fire-warning-text: $dark-text,
+    dark-fire-light-text: $light-text,
+    dark-fire-dark-text: $dark-text,
+    dark-fire-text: $light-text,
+);

@@ -1,18 +1,8 @@
-// $dark-primary: #292F36; //#456990
-$dark-primary: #23272a;
-$dark-secondary: #7289da;
-$dark-accent: #2c2f33;
-$dark-accent-2: #424549;
-
-$success: #7FDB94; //#49BEAA
-$danger: #EF767A; //#FF6B6B // FF6B6B
-$info: #4ECDC4;
-$warning: #FFE66D;
-$light-text: #FEFEFF;
-$dark-text: #333333;
 
 @import "./fonts.scss";
 @import "./themes/dark-theme.scss";
 @import "./layout.scss";
 @import "./global-styles.scss";
 @import "bulma";
+@import "bulma-overrides.scss";
+@import "./themes/themes.scss";

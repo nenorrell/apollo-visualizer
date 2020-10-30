@@ -3,14 +3,17 @@ import React, {useEffect, useState} from "react";
 import { Alert } from "../common/alert/Alert";
 import { ConfigContext } from "../../modules/ConfigContext";
 import { AlertContext } from "../../modules/AlertContext";
+import { ThemeContext } from "../../modules/ThemeContext";
 import { DocRow } from '../doc-row/DocRow';
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as icons from "@fortawesome/free-solid-svg-icons";
+import {faMeteor} from "@fortawesome/free-solid-svg-icons";
 
 export const Home = ()=>{
     const config = React.useContext(ConfigContext);
     const alertContext = React.useContext(AlertContext);
+    const themeContext = React.useContext(ThemeContext);
+
     const [docs, setDocs] = useState([]);
     let groupedRoutes=[];
     let ungroupedRoutes=[];
@@ -38,25 +41,25 @@ export const Home = ()=>{
 
     return (
         <div className="main-container">
-            <section className="section theme-dark-primary">
+            <section className={`section theme-${themeContext}-primary`}>
                 <div className="container">
                     {
                         groupedRoutes.length != 0 ? (
                             groupedRoutes.map(group=>
-                            processGroupRouteItems(group))                         
+                            processGroupRouteItems(group, themeContext))                         
                         )
                         :(null)
                     }
                     <div>
-                        <h5 className="tag theme-dark-secondary is-size-5">
+                        <h5 className={`tag theme-${themeContext}-secondary is-size-5`}>
                             <span className="tag-icon">
-                                <FontAwesomeIcon icon={icons.faMeteor}/>
+                                <FontAwesomeIcon icon={faMeteor}/>
                             </span>
                             Untagged Routes
                         </h5>
                         {
                             ungroupedRoutes.length != 0 ? (
-                                processRouteItems(ungroupedRoutes)
+                                processRouteItems(ungroupedRoutes, themeContext)
                             )
                             :(null)
                         }
@@ -95,12 +98,12 @@ const extractUngroupedRoutes = (items)=>{
     return routes;
 }
 
-const processGroupRouteItems = (group)=>{
+const processGroupRouteItems = (group, themeContext)=>{
     return(
         <div key={uuidv4()}>
-            <h5 className="tag theme-dark-secondary is-size-5">
+            <h5 className={`tag theme-${themeContext}-secondary is-size-5`}>
                 <span className="tag-icon">
-                    <FontAwesomeIcon icon={icons.faMeteor}/>
+                    <FontAwesomeIcon icon={faMeteor}/>
                 </span>
                 {group.tag} 
             </h5>
