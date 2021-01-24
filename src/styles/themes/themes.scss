@@ -32,6 +32,16 @@ $theme-colors: map-collect(
         }
     }
 
+    .theme-#{$category}-bg{
+        background: map-get($theme-colors, $category) !important;
+    }
+    .theme-#{$category}-bg-hover{
+        background: map-get($theme-colors, $category) !important;
+        &:hover{
+            background: darken(map-get($theme-colors, $category), map-get($theme-colors, '#{$theme}-hover-modifier')) !important;
+        }
+    }
+
     .theme-#{$category}-color{
         color: map-get($theme-colors, $category) !important;
     }

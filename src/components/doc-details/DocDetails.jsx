@@ -2,6 +2,10 @@ import './DocDetails.scss';
 import React from "react";
 import { ParamsTable } from '../common/table/ParamsTable';
 import { ThemeContext } from '../../modules/ThemeContext';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atelierCaveDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { atelierDuneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const DocDetails = ({ item }) => {
     const themeContext = React.useContext(ThemeContext);
@@ -48,9 +52,28 @@ export const DocDetails = ({ item }) => {
                         </div>
                         <div className="columns is-mobile">
                             <div className="column is-6-tablet is-12-mobile">
-                                <pre className={`theme-${themeContext}-accent-2`}>
+                                <SyntaxHighlighter language="json" style={darcula} className={`theme-${themeContext}-accent-2`}>
                                     {JSON.stringify(bodySchema, null, 2)}
-                                </pre>
+                                </SyntaxHighlighter>
+                            </div>
+                        </div>
+                    </div>
+                )
+                :(null)
+            }
+            {
+                item.exampleResponse ? (
+                    <div className="param-section">
+                        <div className="columns is-mobile">
+                            <div className="column">
+                                <h6 className={`tag theme-${themeContext}-secondary is-size-6`}>Example Response</h6>
+                            </div>
+                        </div>
+                        <div className="columns is-mobile">
+                            <div className="column is-6-tablet is-12-mobile">
+                                <SyntaxHighlighter language="json" style={darcula} className={`theme-${themeContext}-accent-2`}>
+                                    {JSON.stringify(item.exampleResponse, null, 2)}
+                                </SyntaxHighlighter>
                             </div>
                         </div>
                     </div>
