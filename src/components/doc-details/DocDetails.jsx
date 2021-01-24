@@ -3,8 +3,6 @@ import React from "react";
 import { ParamsTable } from '../common/table/ParamsTable';
 import { ThemeContext } from '../../modules/ThemeContext';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atelierCaveDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { atelierDuneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const DocDetails = ({ item }) => {
