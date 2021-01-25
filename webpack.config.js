@@ -8,7 +8,7 @@ const isProduction = nodeEnv === 'production';
 const bundleName = "bundle.js";
 const PATHS = {
   bundlePath:  `./src/app.js`,
-  build: '/build',
+  build: '/build/',
   bundlePath:  path.resolve(__dirname, `./src/app.js`)
 }
 
