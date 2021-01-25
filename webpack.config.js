@@ -66,7 +66,6 @@ let config = {
         publicPath: PATHS.build,
         filename: bundleName
     },
-
     devServer: {
       compress: true,
       port: 3002

@@ -2,8 +2,9 @@ import './DocDetails.scss';
 import React from "react";
 import { ParamsTable } from '../common/table/ParamsTable';
 import { ThemeContext } from '../../modules/ThemeContext';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
 
 export const DocDetails = ({ item }) => {
     const themeContext = React.useContext(ThemeContext);

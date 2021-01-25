@@ -7,14 +7,14 @@ import { faUserAstronaut, faPalette } from "@fortawesome/free-solid-svg-icons";
 export const Navbar = ({currentTheme, changeTheme})=>{
     let themes = [
         "Dark",
-        "Dark-fire"
+        "Light"
     ]
 
     return (
-        <nav className={`navbar theme-${currentTheme}-nav`} role="navigation" aria-label="main navigation">
+        <nav className={`navbar theme-${currentTheme}-secondary`} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <div className="navbar-item">
-                    <h3 className={`theme-${currentTheme}-text-color is-size-3`}>
+                    <h3 className="is-size-3">
                         <FontAwesomeIcon icon={faUserAstronaut}/> Apollo Visualizer
                     </h3>
                 </div>
